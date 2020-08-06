@@ -152,7 +152,7 @@ if (typeof Superfixer == "undefined") {
                         step: 'Please Input an integer. Any other symble aren;t ALLOWED'
                       }
               },
-              ToSubmit: function(form, event) {
+              submitHandler: function(form, event) {
                   event.preventDefault();
                   //table creating
                   var table = TableMain(
