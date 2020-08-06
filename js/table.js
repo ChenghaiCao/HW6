@@ -163,7 +163,7 @@ if (typeof Superfixer == "undefined") {
                   ElementReplacement(table, form);
               }
           });
-      };
+      }
 
       return {
           init: init
