@@ -75,15 +75,13 @@ if (typeof Superfixer == "undefined") {
         var Superfixer = (function() {
           var init = function() {
           //jQuery validator added
-          jQuery.validator.addMethod("Compareation",function(input, element, params) {
+          jQuery.validator.addMethod("compareTo",function(input, element, params) {
               //int two values and to distinguish both relation whether greater than or less than.
               var BeginNum = parseInt(input);
               var EndNum = parseInt($('input[name="' + params[0] + '"]').val());
 
-              if(isNaN(BeginNum) || isNaN(EndNum)){
+              if(isNaN(BeginNum) || isNaN(EndNum))
                   return true;
-              }
-
               if(params[2]) {
                   return BeginNum <= EndNum;
               } else {
@@ -93,23 +91,23 @@ if (typeof Superfixer == "undefined") {
           '<br>Please try again! <br>Hints: starts number must be GREATER THAN or EQUAL TO the ends number!');
 
           $('form').validate({
-              rules: {  //the rules for Compareation between both rows and columns.
-                  rowm: {required: true, Compareation: ['rowM', 'row', true], number: true,step: 1},
-                  rowM: {required: true, Compareation: ['rowm', 'row', false], number: true, step: 1},
-                  colm: {required: true, Compareation: ['colM', 'col', true], number: true, step: 1},
-                  colM: {required: true, Compareation: ['colm', 'col', false], number: true, step: 1}
+              rules: {  //the rules for compareTo between both rows and columns.
+                  rowm: {required: true, compareTo: ['rowM', 'row', true], number: true,step: 1},
+                  rowM: {required: true, compareTo: ['rowm', 'row', false], number: true, step: 1},
+                  colm: {required: true, compareTo: ['colM', 'col', true], number: true, step: 1},
+                  colM: {required: true, compareTo: ['colm', 'col', false], number: true, step: 1}
               },
 
               showErrors: function(error, fixer) {
                 //to imply the error by using defaultShowErrors in jQuery method.
                   this.defaultShowErrors();
-                  //init the CompareationError as no error.
-                  var CompareationError = false;
+                  //init the compareToError as no error.
+                  var compareToError = false;
                   //for fixer to define error in each commands.
                   fixer.forEach(function(error) {
-                      if(error.method === 'Compareation') {
+                      if(error.method === 'compareTo') {
                         //if error happends, commit the error procedure
-                          CompareationError = true;
+                          compareToError = true;
                           //diminish those error message in both lanes.
                           $('#' + error.element.name + '-error').empty();
                           //cut the last charachar'm'OR 'M' and put row or col command into type
@@ -121,7 +119,7 @@ if (typeof Superfixer == "undefined") {
 
                   //if there is no loonger error exists, replace those
                   //error message into empty.
-                  if(fixer.length === 0 || !CompareationError ) {
+                  if(fixer.length === 0 || !compareToError ) {
                       this.currentElements.each(function(index, element) {
                           var type = element.name.slice(0,-1);
                           $('#' + type + 'Error').empty();
