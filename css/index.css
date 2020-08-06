@@ -1,0 +1,133 @@
+/*
+  a. Chenghai Cao
+  b. Chenghai_cao@student.uml.edu
+  c. Chenghai Cao is learning in Umass Lowell undergrad student, Computer Science Major, this is Chenghai Cao's homework 6 in 91.61 GUI Programming I as a student.
+  d. Aug/03/2020
+  e. This webpage is mainly displays an Interactive Dynamic Table.
+
+  Copyright (c) 2020 by Chenghai Cao. All rights reserved.
+*/
+
+html {
+    background: url("../img/bg.jpg");
+    width:100%;
+    height:100%;
+    background-size:100% 120%;
+}
+
+body {
+    background-color: rgba(0,100,100,0.4);
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    max-width: 860px;
+    min-height: 100%;
+    min-width: 590px;
+    padding: 20px;
+    width: 80%;
+}
+
+h1 {
+  text-align: center;
+  color: lightblue;
+}
+h2{
+  text-align: center;
+  color: lightblue;
+}
+
+html {
+    font-style:  normal;
+    font-family: arial;
+    font-size: 20px;
+    color: white;
+}
+
+body{
+    font-style:  normal;
+    font-family: arial;
+    font-size: 16px;
+    color: white;
+}
+
+input{
+  color: black;
+}
+
+p{
+  color: darkorange;
+  text-align: left;
+  border: 1px;
+  font-size: 20px;
+  font-family: cursive;
+
+}
+
+#form label:not(.error){
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    text-align: right;
+}
+
+#table {
+  text-align: center;
+  max-height: 700px;
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow: auto;
+}
+
+/*color in the cell to interactive the white-off-blue color*/
+#table tr:nth-child(odd) td:nth-child(even) {
+    background-color: #99C3EA;
+}
+
+#table tr:nth-child(even) td:nth-child(odd){
+      background-color: #99C3EA;
+}
+/**********************************************************/
+#table td {
+  border: #ffffff 5px solid;
+  padding: 10px;
+}
+
+#table th{
+  color: white;
+  background-color: #183332;
+  border: #ffffff 5px solid;
+  padding: 10px;
+}
+
+#form fieldset {
+    border: 2px solid rgba(100,50,0,0.3);
+    margin-bottom: 20px;
+    padding: 10px 20px 20px 20px;
+    box-shadow: 5px 10px rgba(50,50,0,0.3);
+}
+
+#form legend {
+    font-weight: bold;
+    text-align: center;
+}
+
+#form input[type='number'] {
+    width: 130px;
+    font-size: 120%;
+    font-family: monospace;
+    margin-right: 20px;
+}
+
+
+#form input[type='submit'] {
+    text-align: center;
+    background-color: rgba(50,0,50,0.7);
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    min-width: 300px;
+    max-width: 1000px;
+    color: lightblue;
+
+}
