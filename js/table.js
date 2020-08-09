@@ -132,22 +132,22 @@ if (typeof Superfixer == "undefined") {
               //for error input as symbols, non-integers and some other stuff.
               messages: {
                     rowM: {
-                        required: 'Please Input a nunber.',
+                        required: 'Please Input a number.',
                         number: 'Please Input an integer.',
                         step: 'Please Input an integer. Any other symble aren"t ALLOWED'
                       },
                       rowm: {
-                        required: 'Please Input a nunber.',
+                        required: 'Please Input a number.',
                         number: 'Please Input an integer.',
                         step: 'Please Input an integer. Any other symble are not ALLOWED'
                       },
                       colm: {
-                        required: 'Please Input a nunber.',
+                        required: 'Please Input a number.',
                         number: 'Please Input an integer.',
                         step: 'Please Input an integer. Any other symble aren;t ALLOWED'
                       },
                       colM:{
-                        required: 'Please Input a nunber.',
+                        required: 'Please Input a number.',
                         number: 'Please Input an integer.',
                         step: 'Please Input an integer. Any other symble aren;t ALLOWED'
                       }
